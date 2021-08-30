@@ -22,7 +22,7 @@ steps:
     - task: Veracode@3
       inputs:
         ConnectionDetailsSelection: 'Endpoint'
-        AnalysisService: 'hector@hcompute.com'
+        AnalysisService: 'Verademo'
         veracodeAppProfile: '$(system.teamProject)'
         version: '$(build.buildNumber)'
         filepath: '$(build.artifactstagingdirectory)'
