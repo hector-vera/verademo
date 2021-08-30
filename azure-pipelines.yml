@@ -19,14 +19,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-    - task: Veracode@3
-      inputs:
-        ConnectionDetailsSelection: 'Endpoint'
-        AnalysisService: 'Verademo'
-        veracodeAppProfile: '$(system.teamProject)'
-        version: '$(build.buildNumber)'
-        filepath: '$(build.artifactstagingdirectory)'
-        maximumWaitTime: '360'
+
 - task: Bash@3
   displayName: Veracode Pipeline
   inputs:
