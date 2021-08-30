@@ -26,7 +26,6 @@ steps:
         veracodeAppProfile: '$(system.teamProject)'
         version: '$(build.buildNumber)'
         filepath: '$(build.artifactstagingdirectory)'
-        sandboxName: 'Daily-Build'
         maximumWaitTime: '360'
 - task: Bash@3
   displayName: Veracode Pipeline
